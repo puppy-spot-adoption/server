@@ -178,7 +178,12 @@ func GenerateEmailTemplate(puppyName, breed, trackingID, trackingURL string) str
         </tr>
         <tr>
             <td align="center" style="border-top: 2px solid #ddd; padding: 10px;">
-                <a href="https://wa.me/15023820019" style="margin: 0 0.5rem; cursor: pointer">Contact a Puppy Concierge: +1 (602) 382-0019</a>
+		<a
+		  href="mailto:support@puppyspotadoption.shop"
+		  style="margin: 0 0.5rem; cursor: pointer"
+		>
+		  Contact a Puppy Concierge: support@puppyspotadoption.shop
+		</a>
             </td>
         </tr>
         <tr>
