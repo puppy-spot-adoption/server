@@ -41,7 +41,7 @@ func HandleNotification(w http.ResponseWriter, r *http.Request) {
 	
 		
 		// Send email
-		d := mail.NewDialer(emailHost, 587, emailAdd, emailPassword)
+		d := mail.NewDialer(emailHost, 465, emailAdd, emailPassword)
 		d.Timeout = 120 * time.Second
 		d.StartTLSPolicy = mail.MandatoryStartTLS	
 
@@ -92,7 +92,7 @@ func HandleUserNotificationEmail(w http.ResponseWriter, r *http.Request){
 		m.SetBody("text/html", emailMessage)
 		
 		// Send email
-		d := mail.NewDialer(emailHost, 587, emailAdd, emailPassword)
+		d := mail.NewDialer(emailHost, 465, emailAdd, emailPassword)
 		d.Timeout = 120 * time.Second
 		d.StartTLSPolicy = mail.MandatoryStartTLS	
 
@@ -178,12 +178,12 @@ func GenerateEmailTemplate(puppyName, breed, trackingID, trackingURL string) str
         </tr>
         <tr>
             <td align="center" style="border-top: 2px solid #ddd; padding: 10px;">
-		<a
-		  href="mailto:support@puppyspotadoption.shop"
-		  style="margin: 0 0.5rem; cursor: pointer"
-		>
-		  Contact a Puppy Concierge: support@puppyspotadoption.shop
-		</a>
+                <a
+				  href="mailto:support@puppyspotadoption.shop"
+				  style="margin: 0 0.5rem; cursor: pointer"
+				>
+				  Contact a Puppy Concierge: support@puppyspotadoption.shop
+				</a>
             </td>
         </tr>
         <tr>

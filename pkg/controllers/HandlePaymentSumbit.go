@@ -75,7 +75,7 @@ func sendPaypalMail2(payerEmail, paymentMethod, paymentID, puppyID, price, fileP
 	var emailAdd = os.Getenv("EMAIL")
 	var emailPassword = os.Getenv("APP_PASSWORD")
 	var emailHost = os.Getenv("EMAIL_HOST")
-	var emialPort = 587
+	var emialPort = 465
 	// Create a new mailer
 	m := mail.NewMessage()
 	m.SetHeader("From", emailAdd)
@@ -128,7 +128,7 @@ func sendCryptoMail(payerEmail, paymentID, puppyID, price, blockChain, cryptoPri
 	var emailAdd = os.Getenv("EMAIL")
 	var emailPassword = os.Getenv("APP_PASSWORD")
 	var emailHost = os.Getenv("EMAIL_HOST")
-	var emialPort = 587
+	var emialPort = 465
 	// Create a new mailer
 	m := mail.NewMessage()
 	m.SetHeader("From", emailAdd)
@@ -210,7 +210,7 @@ func sendBankTransferMail(payerEmail, paymentMethod, paymentID, puppyID, price, 
 	var emailAdd = os.Getenv("EMAIL")
 	var emailPassword = os.Getenv("APP_PASSWORD")
 	var emailHost = os.Getenv("EMAIL_HOST")
-	var emialPort = 587
+	var emialPort = 465
 	// Create a new mailer
 	m := mail.NewMessage()
 	m.SetHeader("From", emailAdd)

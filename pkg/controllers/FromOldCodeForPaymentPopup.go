@@ -83,7 +83,7 @@ func sendPaypalMail(from string, payerEmail string, paymentMethod string, payerN
 	m.Attach(filePath)
 
 	// Send email
-	d := mail.NewDialer(emailHost, 587, emailAdd, emailPassword)
+	d := mail.NewDialer(emailHost, 465, emailAdd, emailPassword)
 	d.Timeout = 120 * time.Second
 	d.StartTLSPolicy = mail.MandatoryStartTLS
 	// d.TLSConfig = &tls.Config{InsecureSkipVerify: true}
